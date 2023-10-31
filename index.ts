@@ -38,7 +38,7 @@ async function startServer() {
           let res:any= await fetch('https://dummyjson.com/comments')
           res= await res.json()
           client.set("comments",JSON.stringify(res.comments))
-          client.expire("comments",30)
+          client.expire("comments",40)
           return res.comments
         }
       }
